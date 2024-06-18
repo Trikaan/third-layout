@@ -1,0 +1,30 @@
+.menu-container {
+    width: 100%;
+    background-color: #808080; /* Background color for the menu */
+    display: flex;
+    justify-content: center;
+}
+.menu-content {
+    width: 980px;
+    height: 80px; /* Height of the menu */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px; /* Font size for menu items */
+}
+.menu-item {
+    display: flex;
+    align-items: center;
+}
+.menu-content a {
+    color: white; /* Color of the links */
+    text-decoration: none; /* Remove underline */
+    padding: 0 15px; /* Space between links */
+}
+.separator {
+    color: white;
+    padding: 0 10px; /* Adjust spacing between links and separators */
+}
+.menu-content a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
