@@ -1,0 +1,465 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+    padding: 8px; /* Add padding for the white frame */
+    background-color: #fff;
+    background:rgba(0, 0, 0, 0)
+
+}
+
+.top-container {
+    width: 100%;
+    height: 200px;
+    background-color: #d6d6d6; /* Gray color */
+}
+
+
+.header-container {
+    width: 1200px;
+    height: 200px;
+    background-color: #d6d6d6;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.work-area {
+    width: 980px;
+    height: 100%; 
+    padding: 60px 10px; 
+    box-sizing: border-box;
+    display: flex;
+}
+
+
+.company-container {
+    display: flex;
+    height: 100px; 
+}
+
+/* Styles for the company logo */
+.company-logo {
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    margin-right: 10px; /* Right margin of the image */
+}
+
+/* Styles for the company name */
+.company-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #777777; /* Text color */
+    display: block;
+}
+
+/* Styles for the company subtitle */
+.company-subtitle {
+    font-size: 15px;
+    color: #8b8989; /* Text color */
+    display: block;
+    margin-top: 10px; /* Reduce margin to bring it closer to the company name */
+}
+
+/* Styles for number container */
+.numbers-container {
+    margin-left: 475px;  
+    width:250px;
+    text-align: right;
+}
+
+/* Styles for phone numbers */
+.phone-number {
+    font-size: 35px;
+    font-family: 'Open Sans Condensed', sans-serif; 
+    color: #8b8989; /* Text color */
+    margin-top: 10px; /* Indent from top */
+    text-decoration: none; /* Remove underscore */
+    line-height: 1;
+
+}
+
+.feedback-link{
+    text-decoration:dashed underline;
+    text-decoration-thickness: 2px;
+    color:#666666;
+    
+}
+
+form {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    height:min-content;
+    position: fixed;
+    inset: 0px;
+    margin:auto;
+    z-index:999;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Overlay styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.close-button {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width:40px;
+    height:40px;
+    background-color:gray;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.error {
+    display: none;
+    color: red;
+    font-size: 12px;
+}
+
+button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+#feedbackForm{
+    display:none;
+}
+
+.top-menu-container {
+    width: 100%;
+    height: 60px; 
+    background-color: #777777; 
+}
+
+.menu-container {
+    width: 1200px; 
+    height: 60px; 
+    background-color: #777777; 
+    margin: 0 auto; /* Placement in the center of the screen */
+    display: flex;
+    justify-content: center; /* Centering the working area horizontally */
+    align-items: center; /* Centering the work area vertically */
+}
+
+
+/* Styles for the menu workspace container */
+.menu-work-area {
+    width: 980px;
+    height: 100%; /* The height matches the height of the header-container */
+    background-color: #777777;
+    margin: 0 auto; /* Placement in the center of the screen */
+    padding: 15px 10px; /* Internal margins top and bottom 20px, left and right 10px */
+    box-sizing: border-box; /* Takes into account width and height indents */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+}
+
+.menu-list a:hover {
+    text-decoration: underline; 
+}
+.menu-list {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; /* Change the display mode to flex */
+    justify-content: center; 
+}
+
+.menu-list li {
+    margin-right: 60px; /* Indentation between list items */
+    position: relative; 
+}
+
+.menu-list li:not(:last-child)::after {
+    content: "|"; /* Set the symbol of the vertical dividing line*/
+    position: absolute; 
+    right: -30px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    font-weight: bold; 
+    font-size: 20px;
+    color: #ffffff; /* Horizontal line color */
+}
+
+.menu-list li a {
+    text-decoration: none; /* Turn off link underlining */
+    color: #ffffff; /* Link text color*/
+    font-size: 22px;
+}
+
+.top-picture-container {
+    width: 100%;
+    height: 350px; 
+    background-color: #f8f8f8; 
+}
+
+.picture-content {
+    width: 1200px;
+    height: 350px; 
+    background-color: #f8f8f8;
+    margin: 0 auto; /*Automatic centering horizontally */
+    padding: 0px 0px; 
+    box-sizing: border-box; 
+    display: flex;  
+    justify-content: center; /* Centering horizontally */
+}
+
+.picture-content img {
+    max-width: 100%;
+    height: auto; /* Preserves the proportions of the image */
+}
+
+/*Styles for the news container */
+.news-container {
+    width: 100%;
+    height: 700px; 
+    background-color: #ffffff;
+}
+
+/* Styles for the inner news container*/
+.news-work-area {
+    width: 980px;
+    height: 100%; 
+    background-color: #ffffff;
+    margin: 0 auto; 
+    padding: 30px 20px; 
+    box-sizing: border-box; 
+    display: flex;
+}
+
+/* Styles for the news container */
+.news-content {
+    width: 370px;
+    height: 530px;
+    background-color: #777777; /* background color of the news container */
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 30px;
+    box-sizing: border-box; 
+    position: relative; 
+}
+
+/* News headline styles */
+.news-title {
+    font-size: 33px;
+    font-weight: bold;
+    color: #ffffff; 
+    margin-bottom: 17px; 
+    margin-top: 10px; 
+}
+
+/* News list styles */
+.news-list {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+/* Styles for news list items */
+.news-list li {
+    font-size: 14px;
+    line-height: 22px;
+    color: #ffffff; 
+    margin-bottom: 25px; 
+}
+
+/* Updated styles for news dates */
+.news-date {
+    font-style: italic; 
+    margin-bottom: 0px; 
+    display: block; 
+}
+
+/* News Archive text styles */
+.news-archive {
+    font-size: 14px;
+    color: #ffffff; 
+    text-align: right; 
+    text-decoration: underline; 
+    position: absolute; 
+    bottom: 70px; 
+    right: 40px; 
+}
+/* Styles for "News Archive" links*/
+.news-archive a {
+    color: #ffffff; 
+    text-decoration: underline; 
+}
+
+
+.studio-container {
+    width: 600px;
+    height: 510px;  
+    background-color: #ffffff;
+    margin-left: 40px; 
+    padding: 10px; 
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+/* Styles for studio title */
+.studio-title {
+    font-size: 40px;
+    color: #333333;
+    margin-bottom: 15px; 
+}
+
+
+.studio-container p {
+    font-size: 14px;
+    line-height: 22px;
+    color: #666666;
+    margin-bottom: 20px; 
+}
+
+
+.footer-container {
+    width: 100%;
+    height: 220px; 
+    background-color: #777777;
+    
+}
+
+.footer-container2 {
+    width: 1200px; 
+    height: 220px;
+    background-color: #777777; 
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center; 
+}
+
+.footer-work-area {
+    width: 980px;
+    height: 100%; 
+    background-color: #777777;
+    margin: 0 auto; 
+    padding: 40px 20px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.copyright-container {
+    width: 280px;
+    height: 100px; 
+    text-align: left;
+    background-color: #777777;
+ }
+
+ .copyright-container p {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+ }
+
+ /* Styles for container with links */
+.links-container {
+    margin-left: 105px;
+    width: 150px;
+    text-align: left;
+    background-color: #777777;
+}
+
+/* Styles for a vertical link list */
+.footer-links {
+    list-style-type: none; /* Disabling the list markers */
+    padding: 0; /* Turning off paddings*/
+    margin: 0; /* Turning off margins */
+}
+
+/* Styles for link list items*/
+.footer-links li {
+    margin-bottom: 8px; /* Margin between links*/
+}
+
+/* Styles for links */
+.footer-links a {
+    text-decoration: underline;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/* Styles for company container */
+.company-logo-container {
+    width: 38px;
+    height: 40px;
+    display: flex;
+    justify-content: center; /* Centering by horizontal */
+    align-items: center; /* Centering by vertical */
+}
+
+/* Styles for logo */
+.company-logo-small {
+    margin-left: 535px;
+    width: 30px;
+    height: 30px;
+}
+
+/* Styles for container */
+.development-container {
+    margin: 0; /* Disabling margin*/
+    background-color: #777777;
+    width: 200px;
+    height: 60px;
+    font-size: 14px;
+    color: white;
+    text-align: start;
+    margin-left: 270px;
+}
+
+.development-container p {
+    margin: 0; /* Disabling margin*/
+    font-size: 14px;
+    color: #ffffff;
+    
+ }
+/* Styles for links */
+.development-container a {
+    text-decoration: underline;
+    color: #ffffff; /* Text color */
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
