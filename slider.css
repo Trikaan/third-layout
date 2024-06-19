@@ -1,8 +1,9 @@
 .slider {
     position: relative;
-    width: 980px;
+    width: 1400px;
     margin: 0 auto;
     overflow: hidden;
+    height:400px;
 }
 .slides {
     display: flex;

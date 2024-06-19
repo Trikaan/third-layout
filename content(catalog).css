@@ -23,7 +23,7 @@
     
 }
 .leftblock {
-    width:200px;
+    
     background-color: lightcoral;
     text-align: center;
 }
@@ -33,7 +33,7 @@
     flex-direction: column;
     align-items: center;
 
-    width:780px;
+
     background-color: #fff;
     
 }
