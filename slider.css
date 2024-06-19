@@ -11,31 +11,30 @@
 .slide {
     min-width: 100%;
     box-sizing: border-box;
+    position:relative;
 }
 .slider img {
     width: 100%;
     display: block;
+    z-index:0;
 }
-.nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    z-index: 2;
-    width: 35px;
-    height: 60px;
-}
+
 .prev {
-    left: 10px;
+    justify-content: center;
+    display:flex;
+    width:35px;
+    height:60px;
+    float:left;
+    margin:-200px 0 0 0;
+    z-index:1;
 }
 .next {
+    justify-content: center;
+    display:flex;   
+    width:35px;
+    height:60px;
     right: 10px;
-}
-.nav-button img {
-    width: 36px;
-    height: auto;
-    display: block;
+    float:right;
+    z-index:1;
+    margin:-200px 0 0 0;
 }
