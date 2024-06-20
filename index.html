@@ -3,68 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Макет 3</title>
+    <title>third-layout</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="menu.css">
-    <link rel="stylesheet" href="slider.css">
-    <link rel="stylesheet" href="content(catalog).css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="feedback.css">
+    <script src="script.js"></script>
 </head>
-
-<body id="body">
-  
+<body>
     <div class="top-container">
         <header class="header-container">
             <div class="work-area">
                 <div class="company-container">
-                    <img src="./images/gray-placeholder.png" alt="Company Logo" class="company-logo">
+                    <img src="./images/logo.png" alt="Company Logo" class="company-logo">
                     <div>
                         <span class="company-name">Назва</span>
                         <span class="company-name">Компанії</span>
                         <span class="company-subtitle">Найкраща компанія</span>
                     </div>
-                    <div class="numbers-container">
-                        <a href="tel:+74997777777" class="phone-number">+7(499) 777-77-77</a>
-                        <br>
-                        <a href="tel:+74997777777" class="phone-number">+7(499) 777-77-77</a>
-                        <br>
-                        <a href="#" class="feedback-link" onclick="openForm()"><strong>Зворотній зв'язок</strong></a>
+                </div>
+                <div class="numbers-container">
+                    <a href="tel:+74997777777" class="phone-number">+7(499) 777-77-77</a>
+                    <br>
+                    <a href="tel:+74997777777" class="phone-number">+7(499) 777-77-77</a>
+                    <span class="feedback">Зворотній зв'язок</span>
                     </div>
                 </div>
             </div>
         </header>
     </div>
 
-    <!-- Overlay to darken the background -->
-        <div class="overlay" id="overlay">
-        <form id="feedbackForm" onsubmit="return validateForm()">
-            <button type="button" class="close-button" onclick="closeForm()">&#x2715;</button>
-            <h2>ЗВОРОТНІЙ ЗВ'ЯЗОК</h2>
-            <label for="name">Ваше ім'я *</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="phone">Телефон *</label>
-            <input type="text" id="phone" name="phone" required>
-            
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required>
-            <span id="emailError" class="error">Поле обов'язкове для заповнення</span>
-            
-            <label for="message">Повідомлення</label>
-            <textarea id="message" name="message"></textarea>
-            
-            <button type="submit">ВІДПРАВИТИ</button>
-        </form>
+    <!-- Modal Window -->
+    <div id="feedback-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">
+                <img src="./images/icon_close.svg" alt="Close" class="close-icon">
+            </span>
+            <h2>Зворотній зв'язок</h2>
+            <form id="feedback-form" class="feedback-form">
+                <label for="name" class="form-label">Ваше ім'я *</label>
+                <div class="input-container">
+                    <input type="text" id="name" name="name" minlength="3" required data-message="Ім'я має бути 3 і більше символів">
+                    <span class="required-field-message">Ім'я має бути 3 і більше символів</span>
+                </div>
+                
+                <label for="phone" class="form-label">Телефон *</label>
+                <div class="input-container">
+                    <input type="tel" id="phone" name="phone" pattern="\d{10}" required data-message="Номер телефону має містити 10 цифр">
+                    <span class="required-field-message">Номер телефону має містити 10 цифр</span>
+                </div>
+                
+                <label for="email" class="form-label">Email *</label>
+                <div class="input-container">
+                    <input type="email" id="email" name="email" pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$" required data-message="Email повинен містити @">
+                    <span class="required-field-message">Email повинен містити @</span>
+                </div>
+                
+                <label for="message" class="form-label">Повідомлення</label>
+                <div class="input-container">
+                    <textarea id="message" name="message" class="textarea-class" required data-message="Поле обов'язкове для заповнення"></textarea>
+                    <span class="required-field-message">Поле обов'язкове для заповнення</span>
+                </div>
+                
+                <button type="submit">Відправити</button>
+            </form>
+        </div>
     </div>
-
     
-
-    
-
-    <script src="script.js"></script>
 
     <div class="top-menu-container">
         <div class="menu-container">
@@ -79,68 +82,174 @@
             </div>
         </div>
     </div>
+
     <div class="top-picture-container">
         <div class="picture-content">
-            <img src="./images/slider.png" alt="Кружечки" style="width:100%; height:auto;">
+            <div class="arrow left-arrow">
+                <img src="./images/left.jpg" alt="Left Arrow">
+            </div>
+            <img id="slideshow" src="./images/slide1.jpg" alt="Slider">
+            <div class="arrow right-arrow">
+                <img src="./images/right.jpg" alt="Right Arrow">
+            </div>
+        </div>
     </div>
-    <div class="news-container">
-        <div class="news-work-area">
-            <div class="news-content">
-                <p class="news-title">Новини</p>
-                <ul class="news-list">
-                    <li>
-                        <span class="news-date">14 вересня 2013 р.</span>
-                        Редизайн веб-сайту архітектурного бюро.
-                    </li>
-                    <li>
-                        <span class="news-date">14 вересня 2013 р.</span>
-                        Розкручування інтернет-магазину декоративних стікерів та вінілових наклейок.
-                    </li>
-                    <li>
-                        <span class="news-date">14 вересня 2013 р.</span>
-                        SEO просування сайту постачальника дизель генераторів.
-                    </li>
-                    <li>
-                        <span class="news-date">14 вересня 2013 р.</span>
-                        Пошукове просування веб-сайту постачальника гідрообладнання. 
-                    </li>
-                    <p class="news-archive"><a href="#">Архів новин</a></p>
+    
+
+    <div class="top-story-container">
+        <div class="story-container">
+            <div class="story-work-area">
+                <ul class="horizontal-menu">
+                    <li><a href="#">Головна</a></li>
+                    <li><a href="#">Каталог</a></li>
+                    <li><p> Побутова техніка</p></li>
                 </ul>
             </div>
-            <div class="studio-container">
-                <span class="studio-title">Компанія «Піксель Плюс»</span>
-                <p>Компанія «Піксель Плюс» існує понад 6 років, за цей час ми брали участь у розробці більш як 700 сайтів, тому можемо впевнено називати себе професіоналами. На даний момент наш колектив складається з більш ніж 30 співробітників, що працюють у двох офісах у Москві та Зеленограді.</p>
-                <p>Одним із основних напрямків робіт нашої компанії є пошукове просування сайтів, на даний момент ми працюємо з більш ніж 150 постійними клієнтами за більш ніж 11 000 пошуковими запитами. При цьому в роботі основний акцент ми робимо на якості робіт, а також застосовуємо власні унікальні розробки в галузі SEO просування. На даний момент відділ SEO складається з 9 осіб під керівництвом провідного спеціаліста, які переважно працюють у нашому московському офісі.</p>
-                <p>Наша компанія є золотим сертифікованим партнером «1С-Бітрікс» (сертифікат №33939 з 2007 по 2013), що ще раз підтверджує кваліфікацію наших співробітників. У січні 2013 року ми стали лідерами продажів продуктів «1С-Бітрікс» і увійшли до числа кращих розробників сайтів Росії. Всі фахівці, які займаються виготовленням сайтів, проходять обов'язкову сертифікацію «1С-Бітрікс» протягом перших 6 місяців роботи в компанії, після чого продовжують безперервно підтримувати та розвивати свої професійні навички.</p>
+        </div>
+    </div>
+    
+    
+    <div class="top-news-container">
+        <div class="news-container">
+            <div class="news-work-area">
+                <div class="sidebar">
+                    <div class="news-list-container">
+                        <div class="category">
+                            <p>Автомобілі</p>
+                            
+                        </div>
+                        <div class="category">
+                            <p>Побутова техніка</p>
+                            <ul class="subcategory">
+                                <li><a href="#">Мікрохвильові печі</a></li>
+                                <li><a href="#">Холодильники</a></li>
+                                <li><a href="#">Посудомийні машини</a></li>
+                                <li><a href="#">Чайники</a></li>
+                            </ul>
+                        </div>
+                        <div class="category">
+                            <p>Мобільна техніка</p>
+                            
+                        </div>
+                        <div class="category">
+                            <p>Комп'ютери</p>
+                            
+                        </div>
+                        <div class="category">
+                            <p>Одяг</p>
+                            
+                        </div>
+                        <div class="category">
+                            <p>Нерухомість</p>
+                        </div>
+                    </div>                    
+                    
+                    
+                    
+                    <div class="image-container">
+                        <img src="./images/logo_price-list.jpg" alt="logo_price" class="fixed-image">
+                        <p>Прайс-лист</p>
+                    </div>
+                </div>
+
+                <div class="product-container">
+                    <div class="product-item">
+                        <img src="./images/nophoto.jpg" alt="nophoto" class="nophoto">
+                        <span>Найкращий чайник, який треба придбати!</span>
+                            <div class="pokypka">
+                                <p>1 900 грн.</p>
+                                <a href="#"><img src="./images/icon_buy.svg" alt="icon_buy" class="icon_buy"></a>
+                            </div>
+                    </div>
+                    <div class="product-item">
+                        <img src="./images/nophoto.jpg" alt="nophoto" class="nophoto">
+                        <span>Найкращий чайник, який треба придбати!</span>
+                            <div class="pokypka">
+                                <p>1 900 грн.</p>
+                                <a href="#"><img src="./images/icon_buy.svg" alt="icon_buy" class="icon_buy"></a>
+                            </div>
+                    </div>
+                    <div class="product-item">
+                        <img src="./images/nophoto.jpg" alt="nophoto" class="nophoto">
+                        <span>Найкращий чайник, який треба придбати!</span>
+                            <div class="pokypka">
+                                <p>1 900 грн.</p>
+                                <a href="#"><img src="./images/icon_buy.svg" alt="icon_buy" class="icon_buy"></a>
+                            </div>
+                    </div>
+                    <div class="product-item2">
+                        <img src="./images/nophoto.jpg" alt="nophoto" class="nophoto">
+                        <span>Найкращий чайник, який треба придбати!</span>
+                            <div class="pokypka">
+                                <p>1 900 грн.</p>
+                                <a href="#"><img src="./images/icon_buy.svg" alt="icon_buy" class="icon_buy"></a>
+                            </div>
+                    </div>
+                    <div class="product-item2">
+                        <img src="./images/nophoto.jpg" alt="nophoto" class="nophoto">
+                        <span>Найкращий чайник, який треба придбати!</span>
+                            <div class="pokypka">
+                                <p>1 900 грн.</p>
+                                <a href="#"><img src="./images/icon_buy.svg" alt="icon_buy" class="icon_buy"></a>
+                            </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="footer-container">
-        <div class="footer-container2">
-            <div class="footer-work-area">
-                <div class="copyright-container">
-                  <p>© 2012–2013 ЗАТ «Компанія»</p>
-                   <p>info@name.ua</p>
-                </div>
-                <div class="links-container">
-                    <ul class="footer-links">
-                        <li><a href="#">Головна</a></li>
-                        <li><a href="#">Каталог</a></li>
-                        <li><a href="#">Доставка і оплата</a></li>
-                        <li><a href="#">Прайс-лист</a></li>
-                        <li><a href="#">Контакти</a></li>
-                    </ul>
-                </div>
-                <div class="company-logo-container">
-                    <img src="./images/logo.png" alt="Company Logo" class="company-logo-small">
-                </div>
-                <div class="development-container">
-                    <p><a href="#">Розробка сайту</a> - 
-                    <br>
-                        компанія «Піксель Плюс»</p>
+    
+    <div class="top-texto-container">
+        <div class="texto-container">
+            <div class="texto-work-area">
+                <div class="mini-texto">
+                    <div class="pagination-container">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                    </div>
+                    <div class="content-container">
+                        <div class="column">
+                            <p>Компанія «Піксель Плюс» існує понад 6 років, за цей час ми брали участь у розробці більш як 700 сайтів, тому можемо впевнено називати себе професіоналами. На даний момент наш колектив складається з більш ніж 30 співробітників, що працюють у двох офісах у Москві та Зеленограді. Характерні для цього жанру мотиви: нерозділеного кохання, догляду молодості, згасання душі.</p>
+                        </div>
+                        <div class="column">
+                            <p>Одним із основних напрямків робіт нашої компанії є пошукове просування сайтів, на даний момент ми працюємо з більш ніж 150 постійними клієнтами за більш ніж 11 000 пошуковими запитами. При цьому в роботі основний акцент ми робимо на якості робіт, а також застосовуємо власні унікальні розробки в галузі SEO просування. На даний момент відділ SEO складається з 9 осіб під керівництвом провідного спеціаліста, які переважно працюють у нашому московському офісі.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+        <div class="footer-container">
+            <div class="footero-container">
+                <div class="footer-work-area">
+                    <div class="copyright-container">
+                        <p>© 2012–2013 ЗАТ «Компанія»</p>
+                        <p>info@name.ua</p>
+                    </div>
+                    <div class="links-container">
+                        <ul class="footer-links">
+                            <li><a href="#">Головна</a></li>
+                            <li><a href="#">Каталог</a></li>
+                            <li><a href="#">Доставка і оплата</a></li>
+                            <li><a href="#">Прайс-лист</a></li>
+                            <li><a href="#">Контакти</a></li>
+                        </ul>
+                    </div>
+                    <div class="company-logo-container">
+                        <img src="./images/logo_companydev.svg" alt="Company Logo" class="company-logo-small">
+                    </div>
+                    <div class="development-container">
+                        <p><a href="#">Розробка сайту</a> - 
+                        <br>
+                            компанія «Піксель Плюс»</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 </html>

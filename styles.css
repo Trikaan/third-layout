@@ -1,9 +1,7 @@
 body {
     font-family: 'PT Sans', sans-serif;
     padding: 8px; /* Add padding for the white frame */
-    background-color: #fff;
-    background:rgba(0, 0, 0, 0)
-
+    background-color: #fff; 
 }
 
 .top-container {
@@ -12,29 +10,30 @@ body {
     background-color: #d6d6d6; /* Gray color */
 }
 
-
+/* Styles for header container */
 .header-container {
-    width: 1200px;
+    width: 1280px; /* Container width */
     height: 200px;
-    background-color: #d6d6d6;
-    margin: 0 auto;
+    background-color: #d6d6d6; /* Gray color */
+    margin: 0 auto; /* Center on the screen */
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center; /* Center work area horizontally */
+    align-items: center; /* Center work area vertically */
 }
 
 .work-area {
     width: 980px;
-    height: 100%; 
-    padding: 60px 10px; 
-    box-sizing: border-box;
+    height: 100%; /* Height including top and bottom padding */
+    padding: 60px 10px; /* Top and bottom padding 60px, left and right padding 10px */
+    box-sizing: border-box; /* Includes padding in width and height */
     display: flex;
 }
 
-
+/* Styles for the container with logo and company name */
 .company-container {
     display: flex;
     height: 100px; 
+    width: 400px;
 }
 
 /* Styles for the company logo */
@@ -63,8 +62,12 @@ body {
 
 /* Styles for number container */
 .numbers-container {
-    margin-left: 475px;  
-    width:250px;
+    height: 200px;
+    margin-left: 450px;
+    margin-top: -15px;
+    background-color: #d6d6d6;
+    padding: 0;
+    padding-right: 10px;
     text-align: right;
 }
 
@@ -75,92 +78,7 @@ body {
     color: #8b8989; /* Text color */
     margin-top: 10px; /* Indent from top */
     text-decoration: none; /* Remove underscore */
-    line-height: 1;
 
-}
-
-.feedback-link{
-    text-decoration:dashed underline;
-    text-decoration-thickness: 2px;
-    color:#666666;
-    
-}
-
-form {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 5px;
-    width: 300px;
-    height:min-content;
-    position: fixed;
-    inset: 0px;
-    margin:auto;
-    z-index:999;
-}
-
-.hidden {
-    display: none;
-}
-
-/* Overlay styles */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-}
-
-.close-button {
-    position: absolute;
-    top: -40px;
-    right: -40px;
-    width:40px;
-    height:40px;
-    background-color:gray;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-h2 {
-    text-align: center;
-}
-
-label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-input, textarea, button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.error {
-    display: none;
-    color: red;
-    font-size: 12px;
-}
-
-button {
-    background-color: #444;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #333;
-}
-
-#feedbackForm{
-    display:none;
 }
 
 .top-menu-container {
@@ -170,7 +88,7 @@ button:hover {
 }
 
 .menu-container {
-    width: 1200px; 
+    width: 1280px; 
     height: 60px; 
     background-color: #777777; 
     margin: 0 auto; /* Placement in the center of the screen */
@@ -199,158 +117,435 @@ button:hover {
     list-style-type: none; 
     padding: 0; 
     margin: 0; 
-    display: flex; /* Change the display mode to flex */
+    display: flex; 
     justify-content: center; 
 }
 
 .menu-list li {
-    margin-right: 60px; /* Indentation between list items */
-    position: relative; 
+    margin-right: 60px; 
+    position: relative; /* Set the relative position for the ability to display the pseudo-element */
 }
 
 .menu-list li:not(:last-child)::after {
-    content: "|"; /* Set the symbol of the vertical dividing line*/
-    position: absolute; 
+    content: "|"; /* Set the vertical dividing line symbol */
+    position: absolute;
     right: -30px; 
     top: 50%; 
     transform: translateY(-50%); 
     font-weight: bold; 
     font-size: 20px;
-    color: #ffffff; /* Horizontal line color */
+    color: #ffffff; 
 }
 
 .menu-list li a {
-    text-decoration: none; /* Turn off link underlining */
-    color: #ffffff; /* Link text color*/
+    text-decoration: none; 
+    color: #ffffff; 
     font-size: 22px;
+}
+
+.top-story-container {
+    width: 100%;
+    height: 30px; 
+    background-color: #ffffff; 
+}
+
+.story-container {
+    width: 1280px; 
+    height: 30px; 
+    background-color: #ffffff; 
+    margin: 0 auto; /* Placement in the center of the screen */
+    display: flex;
+    justify-content: center; /* Centering the working area horizontally */
+    align-items: center; /* Centering the work area vertically */
+}
+
+.story-work-area {
+    width: 980px;
+    height: 100%;
+    background-color: #ffffff;
+    margin: 0 auto; 
+    padding: 10px 15px; 
+    box-sizing: border-box;
+    display: flex;
+    justify-content: left; 
+    align-items: center;
+}
+
+.horizontal-menu {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.horizontal-menu li {
+    position: relative;
+    margin: 0 5px; 
+}
+
+.horizontal-menu a {
+    color: #777777; 
+    font-size: 16px;
+}
+
+
+.horizontal-menu p {
+    color: #777777; 
+    font-size: 16px;
+    text-decoration: none;
+}
+
+
+
+/* Add a separator only after elements that are not the last */
+.horizontal-menu li:not(:last-child)::after {
+    content: '/';
+    color: #777777;
+    margin-left: 6px;
 }
 
 .top-picture-container {
     width: 100%;
-    height: 350px; 
-    background-color: #f8f8f8; 
+    height: 470px; 
+}
+
+.picture-work-area {
+    width: 1280px;
+    height: 470px;
+    margin: 0 auto;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+
 }
 
 .picture-content {
-    width: 1200px;
-    height: 350px; 
-    background-color: #f8f8f8;
-    margin: 0 auto; /*Automatic centering horizontally */
-    padding: 0px 0px; 
-    box-sizing: border-box; 
+    width: 1280px;
+    height: 470px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 0px;
+    box-sizing: border-box;
     display: flex;  
-    justify-content: center; /* Centering horizontally */
+    justify-content: center;
+    position: relative; 
 }
 
 .picture-content img {
-    max-width: 100%;
-    height: auto; /* Preserves the proportions of the image */
+    width: 1280px;
+    height: 470px;
+    transition: opacity 0.5s ease;
+    opacity: 1;
 }
 
-/*Styles for the news container */
-.news-container {
+.picture-content img.hidden {
+    opacity: 0;
+}
+
+.arrow {
+    font-size: 2em;
+    color: #000;
+    cursor: pointer;
+    user-select: none;
+    margin: 0 170px 0 170px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.arrow img {
+    width: 100%; 
+    height: auto; 
+    filter: alpha(Opacity=50); 
+    opacity: 0.50; /* Translucent for other browsers */
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
+}
+
+
+/* Styles for news container */
+.top-news-container {
     width: 100%;
-    height: 700px; 
-    background-color: #ffffff;
+    height: 720px; 
+    background-color: #ffffff; 
 }
 
-/* Styles for the inner news container*/
+.news-container {
+    width: 1280px; 
+    height: 720px; 
+    background-color: #ffffff; 
+    margin: 0 auto; /* Placement in the center of the screen */
+    display: flex;
+    justify-content: center; /* Centering the working area horizontally */
+    align-items: center; /* Centering the work area vertically */
+}
+
+
+/* Styles for internal news container */
 .news-work-area {
     width: 980px;
     height: 100%; 
     background-color: #ffffff;
     margin: 0 auto; 
-    padding: 30px 20px; 
-    box-sizing: border-box; 
+    padding: 10px 20px; /* Internal margins top and bottom 20px, left and right 10px */
+    box-sizing: border-box; /* Takes width and height indents into account */
     display: flex;
 }
 
-/* Styles for the news container */
-.news-content {
-    width: 370px;
-    height: 530px;
-    background-color: #777777; /* background color of the news container */
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 30px;
-    box-sizing: border-box; 
-    position: relative; 
-}
-
-/* News headline styles */
-.news-title {
-    font-size: 33px;
-    font-weight: bold;
-    color: #ffffff; 
-    margin-bottom: 17px; 
-    margin-top: 10px; 
-}
-
-/* News list styles */
-.news-list {
-    list-style-type: none; 
-    padding: 0; 
-    margin: 0; 
-}
-
-/* Styles for news list items */
-.news-list li {
-    font-size: 14px;
-    line-height: 22px;
-    color: #ffffff; 
-    margin-bottom: 25px; 
-}
-
-/* Updated styles for news dates */
-.news-date {
-    font-style: italic; 
-    margin-bottom: 0px; 
-    display: block; 
-}
-
-/* News Archive text styles */
-.news-archive {
-    font-size: 14px;
-    color: #ffffff; 
-    text-align: right; 
-    text-decoration: underline; 
-    position: absolute; 
-    bottom: 70px; 
-    right: 40px; 
-}
-/* Styles for "News Archive" links*/
-.news-archive a {
-    color: #ffffff; 
-    text-decoration: underline; 
-}
-
-
-.studio-container {
-    width: 600px;
-    height: 510px;  
+.image-container {
+    width: 196px;
+    height: 130px;
     background-color: #ffffff;
-    margin-left: 40px; 
-    padding: 10px; 
-    padding-right: 10px;
-    padding-top: 10px;
 }
 
-/* Styles for studio title */
-.studio-title {
-    font-size: 40px;
-    color: #333333;
-    margin-bottom: 15px; 
+.image-container p {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    color: #444444;
+    margin-top: 85px;
 }
 
+.news-list-container {
+    width: 196px;
+    height: 280px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    padding: 0px;
+}
 
-.studio-container p {
+.news-list-container p {
+    font-size: 18px;
+    color: #777777;
+    padding-bottom: 6px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.news-list-container p:hover {
+    text-decoration: underline;
+}
+
+.subcategory {
+    display: none;
+    padding-left: 20px;
+}
+
+.subcategory li {
     font-size: 14px;
-    line-height: 22px;
-    color: #666666;
-    margin-bottom: 20px; 
+    color: #555555;
+    line-height: 24px;
+    margin: 0;
+    cursor: pointer;
+    position: relative; 
+    list-style-type: none;
+}
+
+.subcategory a {
+    color: #777777;
+    text-decoration: none;
+}
+
+.subcategory li::before {
+    content: "•"; /* Add the symbol "•" */
+    position: absolute;
+    left: -10px; /* Adjust the distance between the marker and the text */
+}
+
+.subcategory li:hover {
+    text-decoration: underline;
 }
 
 
+.category:hover .subcategory {
+    display: block;
+}
+
+
+
+/* Styles for image container */
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px; /* Indentation between category list and image */
+}
+
+.fixed-image {
+    position: relative;
+    width: 80px;
+    height: 90px;
+}
+
+/* Styles for the goods container */
+.product-container {
+    width: 760px;
+    height: 720px;
+    background-color: #ffffff; 
+    box-sizing: border-box; 
+    display: flex;
+    flex-wrap: wrap; /* Wrap the products in a new line */
+    row-gap: 10px; /* Distance between lines */
+}
+
+
+/* Styles for individual products */
+.product-item {
+    padding: 15px;
+    margin-left: 15px;
+    width: 233px;
+    height: 340px;
+    background-color: #dcdcdc;
+    box-sizing: border-box;
+}
+
+/* Styles for individual products */
+.product-item2 {
+    padding: 15px;
+    margin-left: 15px;
+    margin-top: -20px;
+    width: 233px;
+    height: 340px;
+    background-color: #dcdcdc;
+    box-sizing: border-box;
+}
+
+.product-item,
+.product-item2 span {
+    font-size: 16px;
+    color: #767676;
+}
+
+.product-item p {
+    font-size: 24px;
+    width: 120px;
+    color: #444444;
+    margin-top: 40px;
+    text-align: start;
+    font-weight: bold;
+}
+
+.product-item2 p {
+    font-size: 24px;
+    width: 120px;
+    color: #444444;
+    margin-top: 40px;
+    text-align: start;
+    font-weight: bold;
+}
+
+.pokypka {
+    display: flex;
+}
+
+.nophoto {
+    width: 200px;
+    height: 200px;
+    padding-bottom: 10px;
+}
+
+.icon_buy {
+    width: 30px;
+    height: 30px;
+    margin: 40px 0 0 45px;
+}
+
+
+/* Styles for news container */
+.top-texto-container {
+    width: 100%;
+    height: 540px; 
+    background-color: #ffffff; 
+}
+
+.texto-container {
+    width: 1280px; 
+    height: 540px; 
+    background-color: #ffffff; 
+    margin: 0 auto; /* Placement in the center of the screen */
+    display: flex;
+    justify-content: center; /* Centering the working area horizontally */
+    align-items: center; /* Centering the work area vertically */
+}
+
+
+.texto-work-area {
+    width: 980px;
+    height: 100%; 
+    background-color: #ffffff;
+    margin: 0 auto; 
+    padding: 10px 20px; 
+    box-sizing: border-box; 
+    display: flex;
+    justify-content: end;
+}
+
+.mini-texto {
+    width: 729px;
+    height: 100%; 
+    background-color: #ffffff;
+    padding: 0px;
+}
+
+.pagination-container {
+    width: 729px;
+    height: 30px;
+    display: flex;
+    align-items: flex-end; /* Bottom alignment */
+    justify-content: center;
+    background-color: #ffffff;
+    padding-top: 0;
+}
+
+.pagination-container a {
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin: 0 2px;
+    padding: 5px 10px;
+    display: inline-block; /* Add a block type to make the alignment work */
+}
+
+.pagination-container a:hover {
+    color: #333;
+}
+
+.pagination-container a:nth-child(3) {
+    font-size: 18px;
+    color: #444444;
+}
+
+.content-container {
+    border-top: 1px solid #767676;
+    margin-top: 50px;
+    background-color: #ffffff;
+    padding: 15px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    width: 350px; /* Width of each column */
+}
+
+.column p {
+    margin: 5px 0;
+    color: #767676;
+}
+
+
+
+/* Styles for the footer container */
 .footer-container {
     width: 100%;
     height: 220px; 
@@ -358,11 +553,11 @@ button:hover {
     
 }
 
-.footer-container2 {
-    width: 1200px; 
+.footero-container {
+    width: 1280px; 
     height: 220px;
     background-color: #777777; 
-    margin: 0 auto; 
+    margin: 0 auto;
     display: flex;
     justify-content: center; 
 }
@@ -377,6 +572,7 @@ button:hover {
     display: flex;
 }
 
+/* Styles for container with copyright */
 .copyright-container {
     width: 280px;
     height: 100px; 
@@ -385,12 +581,12 @@ button:hover {
  }
 
  .copyright-container p {
-    margin: 0;
+    margin: 0; 
     font-size: 14px;
     color: #ffffff;
  }
 
- /* Styles for container with links */
+/* Styles for container with links */
 .links-container {
     margin-left: 105px;
     width: 150px;
@@ -398,44 +594,43 @@ button:hover {
     background-color: #777777;
 }
 
-/* Styles for a vertical link list */
+/* Styles for vertical link list */
 .footer-links {
-    list-style-type: none; /* Disabling the list markers */
-    padding: 0; /* Turning off paddings*/
-    margin: 0; /* Turning off margins */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Styles for link list items*/
+/* Styles for link list items */
 .footer-links li {
-    margin-bottom: 8px; /* Margin between links*/
+    margin-bottom: 8px; /* Відступ між пунктами списку */
 }
 
-/* Styles for links */
 .footer-links a {
     text-decoration: underline;
     font-size: 14px;
     color: #ffffff;
 }
 
-/* Styles for company container */
+/* Styles for the company container */
 .company-logo-container {
     width: 38px;
     height: 40px;
     display: flex;
-    justify-content: center; /* Centering by horizontal */
-    align-items: center; /* Centering by vertical */
+    justify-content: center; 
+    align-items: center; 
 }
 
-/* Styles for logo */
+/* Styles for company logo */
 .company-logo-small {
     margin-left: 535px;
     width: 30px;
     height: 30px;
 }
 
-/* Styles for container */
+/* Styles for the site development container */
 .development-container {
-    margin: 0; /* Disabling margin*/
+    margin: 0; 
     background-color: #777777;
     width: 200px;
     height: 60px;
@@ -446,15 +641,16 @@ button:hover {
 }
 
 .development-container p {
-    margin: 0; /* Disabling margin*/
+    margin: 0; 
     font-size: 14px;
     color: #ffffff;
     
- }
-/* Styles for links */
+}
+
+/* Styles for the link in the site development container */
 .development-container a {
     text-decoration: underline;
-    color: #ffffff; /* Text color */
+    color: #ffffff; /* Колір тексту */
 }
 
 /* CSS Reset */
@@ -462,4 +658,207 @@ button:hover {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Modal window */
+.feedback {
+    font-weight: bold;
+    font-size: 20px;
+    color: #777777;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    cursor: pointer;
+}
+
+.modal {
+    display: none; /* Hide the default modal window */
+    position: fixed; /* Fixed positioning */
+    z-index: 2; /* Place on top of other elements */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Add scrolling if needed */
+    background-color: rgba(0,0,0,0.4); /* Black background with transparency */
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+
+.modal-content {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 450px;
+    height: 560px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Add a shadow */
+    position: relative; /* Relative positioning for close-btn */
+    text-align: center; /* Center the text inside the modal window */
+    opacity: 0; /* Initially hide the modal window */
+    animation: fade-in 0.5s forwards; /* Appearance animation */
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.close-btn {
+    width: 30px;
+    height: 30px;
+    color: #aaaaaa;
+    float: right;
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    cursor: pointer;
+    background-color: #777777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none; 
+}
+
+.close-btn img.close-icon {
+    width: 20px; 
+    height: 20px;
+}
+
+.modal-content h2 {
+    font-size: 28px;
+    font-weight: bolder;
+    color: #535353;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    background-color: #706f6f;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+
+.form-label {
+    margin-top: 15px;
+    text-align: center;
+    width: 100%;
+    color: #535353;
+}
+
+input, textarea {
+    width: 340px;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #c3c3c3; /* Frame color */
+}
+
+input {
+    border: 1px solid #c3c3c3; /* Default frame color */
+    outline: none; /* Remove outer frame */
+}
+
+
+input:focus {
+    border-color: #7e7e7e; /* Green color of the frame when focused */
+}
+
+textarea {
+    border: 1px solid #c3c3c3; /* Default frame color */
+    outline: none; /* Remove outer frame */
+}
+
+textarea:focus {
+    border-color: #7e7e7e; /* Green color of the frame when focused */
+}
+
+.textarea-class {
+    height: 130px;
+    resize: none;
+}
+
+button {
+    width: max-content;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #777777;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #888888;
+}
+
+.required-field-message {
+    font-size: 12px;
+    color: red;
+    display: none; /* Initially hide the message */
+}
+
+.required-field-empty {
+    box-shadow: inset 0 0 5px red; /* Red inner shadow */
+}
+
+.required-field-empty + .required-field-message {
+    display: block; /* Show a message when the field is empty */
+}
+
+.input-container {
+    position: relative;
+    width: 350px;
+}
+
+.input-container input,
+.input-container textarea {
+    width: calc(100% - 20px); /* We take into account the indents */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #c3c3c3;
+    margin-top: 5px;
+    outline: none;
+}
+
+.input-container input:focus,
+.input-container textarea:focus {
+    border-color: #7e7e7e;
+}
+
+.input-container .required-field-message {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-150%);
+    left: 20px;
+    border: 1px solid #777777; 
+    border-radius: 2px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+    background-color: #f5ecec;
+    display: none;
+    white-space: nowrap; /* Prevent text wrapping */
+    padding: 0 5px; /* Extra padding */
+}
+
+.input-container input.required-field-empty,
+.input-container textarea.required-field-empty {
+    box-shadow: inset 0 0 5px red;
+}
+
+.input-container input.required-field-empty + .required-field-message,
+.input-container textarea.required-field-empty + .required-field-message {
+    display: block;
 }
